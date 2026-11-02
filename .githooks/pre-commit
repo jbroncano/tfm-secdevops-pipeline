@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Rechaza líneas nuevas que mencionen herramientas de IA (comentarios, docs).
+encontradas=$(git diff --cached -U0 --no-color | grep -E '^\+[^+]' | grep -iE 'cl[a]ude|anthr[o]pic')
+if [ -n "$encontradas" ]; then
+  echo "pre-commit: hay líneas que mencionan herramientas de IA:" >&2
+  echo "$encontradas" >&2
+  exit 1
+fi
