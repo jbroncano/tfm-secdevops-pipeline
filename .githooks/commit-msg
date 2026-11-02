@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Rechaza mensajes de commit con coautores o firmas de herramientas de IA.
+if grep -qiE 'co-authored-by|generated with|cl[a]ude|anthr[o]pic' "$1"; then
+  echo "commit-msg: el mensaje incluye un coautor o firma de herramienta de IA. Quítalo y vuelve a hacer el commit." >&2
+  exit 1
+fi

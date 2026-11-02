@@ -16,6 +16,8 @@ Aplicación de validación (React + Express + MongoDB) y los pipelines de GitHub
 
 `main` y `develop` están protegidas: sin push directo, PR obligatorio y pipeline en verde.
 
+Después de clonar, activa los hooks del repo: `git config core.hooksPath .githooks`.
+
 ## Local
 
 ```bash
