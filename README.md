@@ -1,11 +1,8 @@
-# TFM SecDevOps: pipeline
+# Expense Tracker
 
-Aplicación de validación (React + Express + MongoDB) y los pipelines de GitHub Actions del TFM.
+Aplicación de validación (React + Express + MongoDB) del TFM SecDevOps.
 
-| Workflow | Estado |
-|---|---|
-| `.github/workflows/base.yml` | Pipeline base, sin controles de seguridad |
-| `.github/workflows/seguro.yml` | Pendiente: mismo pipeline con controles de seguridad |
+El pipeline vive en [secdevops-pipeline](https://github.com/tfm-secdevops-unir/secdevops-pipeline). `.github/workflows/ci.yml` solo lo llama, fijado por SHA, y cualquier cambio en `.github/` requiere la revisión de `CODEOWNERS`.
 
 ## Ramas
 
